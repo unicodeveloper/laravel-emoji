@@ -1,0 +1,35 @@
+{
+    "name": "unicodeveloper/laravel-emoji",
+    "description": "A Laravel 5 Package for Using & Working With Emojis",
+    "keywords": ["php","github","laravel","Open Source","emoji","unicode","laravel 5"],
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "unicodeveloper",
+        "email": "prosperotemuyiwa@gmail.com"
+      }
+   ],
+   "minimum-stability": "stable",
+   "require": {
+    "php": "^7.0",
+    "illuminate/support": "5.*",
+   },
+   "require-dev": {
+        "phpunit/phpunit" : "4.*",
+        "scrutinizer/ocular": "~1.1",
+        "satooshi/php-coveralls": "^0.7.0"
+    },
+   "autoload": {
+        "psr-4": {
+          "Unicodeveloper\\Emoji\\": "src/"
+        }
+   },
+   "autoload-dev": {
+        "psr-4": {
+            "Unicodeveloper\\Emoji\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
+}
