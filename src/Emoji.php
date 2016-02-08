@@ -10,7 +10,7 @@ class Emoji {
      * Get the Emojis from emoji.php
      * @return array
      */
-    private function getEmojis()
+    private function getEmojis() : array
     {
         return require("Emojis/emoji.php");
     }
@@ -22,7 +22,7 @@ class Emoji {
      * @throws \Unicodeveloper\Emoji\Exceptions\IsNull
      * @throws \Unicodeveloper\Emoji\Exceptions\UnknownUnicode
      */
-    public function findByAlias($emojiName = null)
+    public function findByAlias($emojiName = null) : string
     {
         if (is_null($emojiName)) {
             throw IsNull::create("Please provide the name of the emoji you are looking for");
@@ -43,7 +43,7 @@ class Emoji {
      * @param  string $emojiName
      * @return unicode
      */
-    public function findByName($emojiName = null)
+    public function findByName($emojiName = null) : string
     {
         return $this->findByAlias($emojiName);
     }
@@ -55,7 +55,7 @@ class Emoji {
      * @throws \Unicodeveloper\Emoji\Exceptions\IsNull
      * @throws \Unicodeveloper\Emoji\Exceptions\UnknownUnicode
      */
-    public function findByUnicode($unicode = null)
+    public function findByUnicode($unicode = null) : string
     {
         if (is_null($unicode)) {
             throw IsNull::create("Please provide a valid UTF-8 Unicode value");
