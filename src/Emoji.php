@@ -37,7 +37,7 @@ class Emoji {
 
     public function findByName($emojiName = null)
     {
-        $this->findByAlias($emojiName);
+        return $this->findByAlias($emojiName);
     }
 
     public function findByUnicode($unicode = null)
@@ -46,9 +46,13 @@ class Emoji {
             throw new \Exception("Please provide a valid UTF-8 Unicode value");
         }
 
-        $emoji = array_flip($this->getEmojis());
+        $emojis = array_flip($this->getEmojis());
 
-        return $emoji[$unicode];
+        if (! array_key_exists($unicode, $emojis)) {
+            throw new \Exception("Emoji Not Found, Man. Please provide a valid UTF-8 Unicode value");
+        }
+
+        return $emojis[$unicode];
     }
 
 }
