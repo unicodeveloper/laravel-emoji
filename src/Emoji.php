@@ -2,7 +2,7 @@
 
 namespace Unicodeveloper\Emoji;
 
-use Unicodeveloper\Emoji\Exceptions\UnknownMethod;
+use Unicodeveloper\Emoji\Exceptions\{ UnknownMethod, UnknownEmoji };
 
 class Emoji {
 
@@ -31,7 +31,7 @@ class Emoji {
         $emoji = strtolower($emojiName);
 
         if (! array_key_exists($emoji, $this->getEmojis())) {
-            throw new \Exception("Emoji Not Found, Man. Check your spelling and try again");
+            throw UnknownEmoji::create($emoji);
         }
 
         return $this->getEmojis()[$emoji];
