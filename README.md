@@ -6,7 +6,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/unicodeveloper/laravel-emoji.svg?style=flat-square)](https://scrutinizer-ci.com/g/unicodeveloper/laravel-emoji)
 [![Total Downloads](https://img.shields.io/packagist/dt/unicodeveloper/laravel-emoji.svg?style=flat-square)](https://packagist.org/packages/unicodeveloper/laravel-emoji)
 
-> A Laravel 5 Package for Using & Working With Emojis
+> A Laravel 5 Package for Using & Working With Emojis in your Laravel Apps
 
 ## Installation
 
@@ -36,10 +36,28 @@ Also, register the Facade like so:
 
 ## Usage
 
+Translate Emoji names to Unicode and Vice-versa.
+
+```php
+>> Emoji::findByAlias("kissing_heart")
+=> "😘"
+
+>> Emoji::findByName("sunglasses")
+=> "😎"
+
+>> Emoji::findByUnicode("\u{1F603}")
+=> "smiley"
+
+```
+This package contains some of the characters listed on http://unicode.org/emoji/charts/full-emoji-list.html
 
 ## Contributing
 
 Please feel free to fork this package and contribute by submitting a pull request to enhance the functionalities.
+
+I am accepting PR's that add characters to emoji.php.
+Please use [this list](http://unicode.org/emoji/charts/full-emoji-list.html) to look up the unicode value and
+the name of the character.
 
 ## How can I thank you?
 
@@ -49,6 +67,10 @@ Don't forget to [follow me on twitter](https://twitter.com/unicodeveloper)!
 
 Thanks!
 Prosper Otemuyiwa.
+
+## Inspiration
+
+* [Emoji](https://github.com/spatie/emoji)
 
 ## License
 
