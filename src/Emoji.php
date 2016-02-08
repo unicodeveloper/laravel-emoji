@@ -2,6 +2,8 @@
 
 namespace Unicodeveloper\Emoji;
 
+use Unicodeveloper\Emoji\Exceptions\UnknownMethod;
+
 class Emoji {
 
     /**
@@ -58,7 +60,7 @@ class Emoji {
     public function __call($method, $parameters)
     {
         if (! method_exists(new static, $method)) {
-            throw new \Exception("This method does not exist in this package. Please check the documentation");
+            throw UnknownMethod::create($method);
         }
     }
 
