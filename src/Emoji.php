@@ -2,7 +2,7 @@
 
 namespace Unicodeveloper\Emoji;
 
-use Unicodeveloper\Emoji\Exceptions\{ UnknownMethod, UnknownEmoji, UnknownUnicode };
+use Unicodeveloper\Emoji\Exceptions\{ UnknownMethod, UnknownEmoji, UnknownUnicode, IsNull };
 
 class Emoji {
 
@@ -25,7 +25,7 @@ class Emoji {
     public function findByAlias($emojiName = null)
     {
         if (is_null($emojiName)) {
-            throw new \Exception("Please provide the name of the emoji you are looking for");
+            throw IsNull::create("Please provide the name of the emoji you are looking for");
         }
 
         $emoji = strtolower($emojiName);
@@ -45,7 +45,7 @@ class Emoji {
     public function findByUnicode($unicode = null)
     {
         if (is_null($unicode)) {
-            throw new \Exception("Please provide a valid UTF-8 Unicode value");
+            throw IsNull::create("Please provide a valid UTF-8 Unicode value");
         }
 
         $emojis = array_flip($this->getEmojis());
