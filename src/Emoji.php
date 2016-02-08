@@ -7,14 +7,7 @@ use Unicodeveloper\Emoji\Exceptions\{ UnknownMethod, UnknownEmoji, UnknownUnicod
 class Emoji {
 
     /**
-     * Quotes
-     * @var collection
-     */
-    protected $quotes;
-
-    /**
-     * Get the Quotes from the respective files depending on the Category
-     * @param  string $category
+     * Get the Emojis from emoji.php
      * @return array
      */
     private function getEmojis()
@@ -22,6 +15,13 @@ class Emoji {
         return require("Emojis/emoji.php");
     }
 
+    /**
+     * Get the emoji  by passing the commonly used emoji name
+     * @param  string $emojiName
+     * @return unicode
+     * @throws \Unicodeveloper\Emoji\Exceptions\IsNull
+     * @throws \Unicodeveloper\Emoji\Exceptions\UnknownUnicode
+     */
     public function findByAlias($emojiName = null)
     {
         if (is_null($emojiName)) {
@@ -37,11 +37,24 @@ class Emoji {
         return $this->getEmojis()[$emoji];
     }
 
+    /**
+     * Get the emoji  by passing the commonly used emoji name
+     * Alias for findByAlias
+     * @param  string $emojiName
+     * @return unicode
+     */
     public function findByName($emojiName = null)
     {
         return $this->findByAlias($emojiName);
     }
 
+    /**
+     * Get the emoji name by passing the unicode value
+     * @param  string $unicode
+     * @return string
+     * @throws \Unicodeveloper\Emoji\Exceptions\IsNull
+     * @throws \Unicodeveloper\Emoji\Exceptions\UnknownUnicode
+     */
     public function findByUnicode($unicode = null)
     {
         if (is_null($unicode)) {
@@ -57,6 +70,12 @@ class Emoji {
         return $emojis[$unicode];
     }
 
+    /**
+     * Ensure that a proper exception is thrown for methods that do not exist
+     * @param  string $method
+     * @param  array $parameters
+     * @throws \Unicodeveloper\Emoji\Exceptions\UnknownMethod
+     */
     public function __call($method, $parameters)
     {
         if (! method_exists(new static, $method)) {
