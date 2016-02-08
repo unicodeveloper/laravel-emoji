@@ -1,6 +1,6 @@
 # laravel-emoji
 
-![emoji](https://cloud.githubusercontent.com/assets/2946769/12880338/d3d4021a-ce3f-11e5-8818-27fc6f7384f9.png)
+![emoji](https://cloud.githubusercontent.com/assets/2946769/12880382/25da8dd6-ce40-11e5-8bfd-ee2b547bb11e.png)
 [![Latest Stable Version](https://poser.pugx.org/unicodeveloper/laravel-emoji/v/stable.svg)](https://packagist.org/packages/unicodeveloper/laravel-emoji)
 [![License](https://poser.pugx.org/unicodeveloper/laravel-emoji/license.svg)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/unicodeveloper/laravel-emoji.svg)](https://travis-ci.org/unicodeveloper/laravel-emoji)
