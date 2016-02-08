@@ -2,7 +2,7 @@
 
 namespace Unicodeveloper\Emoji;
 
-use Unicodeveloper\Emoji\Exceptions\{ UnknownMethod, UnknownEmoji };
+use Unicodeveloper\Emoji\Exceptions\{ UnknownMethod, UnknownEmoji, UnknownUnicode };
 
 class Emoji {
 
@@ -51,7 +51,7 @@ class Emoji {
         $emojis = array_flip($this->getEmojis());
 
         if (! array_key_exists($unicode, $emojis)) {
-            throw new \Exception("Emoji Not Found, Man. Please provide a valid UTF-8 Unicode value");
+            throw UnknownUnicode::create($unicode);
         }
 
         return $emojis[$unicode];
