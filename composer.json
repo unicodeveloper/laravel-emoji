@@ -6,7 +6,8 @@
     "authors": [
       {
         "name": "unicodeveloper",
-        "email": "prosperotemuyiwa@gmail.com"
+        "email": "prosperotemuyiwa@gmail.com",
+        "role": "Developer"
       }
    ],
    "minimum-stability": "stable",
