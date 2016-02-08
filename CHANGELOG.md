@@ -2,5 +2,5 @@
 
 All Notable changes to `laravel-emoji` will be documented in this file
 
-## 2015-02-07
+## 2016-02-08
 - Initial release
