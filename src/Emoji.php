@@ -55,4 +55,11 @@ class Emoji {
         return $emojis[$unicode];
     }
 
+    public function __call($method, $parameters)
+    {
+        if (! method_exists(new static, $method)) {
+            throw new \Exception("This method does not exist in this package. Please check the documentation");
+        }
+    }
+
 }
