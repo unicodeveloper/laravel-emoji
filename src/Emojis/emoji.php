@@ -23,14 +23,13 @@ return [
     "wink"                      => "\u{1F609}",
     "blush"                     => "\u{1F60A}",
     "yum"                       => "\u{1F60B}",
+    "relieved"                  => "\u{1F60C}",
     "sunglasses"                => "\u{1F60E}",
     "heart_eyes"                => "\u{1F60D}",
     "kissing_heart"             => "\u{1F618}",
     "kissing"                   => "\u{1F617}",
     "kissing_smiling_eyes"      => "\u{1F619}",
     "kissing_closed_eyes"       => "\u{1F61A}",
-    "relaxed"                   => "\u{263A}",
-    "relieved"                  => "\u{1F60C}",
     "stuck_out_tongue"          => "\u{1F61C}",
     "stuck_out_tongue_closed_eyes" => "\u{1F61D}",
     "disappointed"              => "\u{1F61E}",
@@ -63,5 +62,6 @@ return [
     "raising_hand"              => "\u{1F64B}",
     "raised_hands"              => "\u{1F64C}",
     "person_frowning"           => "\u{1F64D}",
-    "pray"                      => "\u{1F64F}"
+    "pray"                      => "\u{1F64F}",
+    "relaxed"                   => "\u{263A}"
 ];
