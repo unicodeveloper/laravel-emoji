@@ -45,8 +45,8 @@ return [
     "worried"                   => "\u{1F61F}",
     "cry"                       => "\u{1F622}",
     "scream"                    => "\u{1F631}",
-    "pray"                      => "\u{1F64F}",
     "raised_hands"              => "\u{1F64C}",
+    "pray"                      => "\u{1F64F}",
     "relaxed"                   => "\u{263A}",
     "white_check_mark"          => "\u{2705}",
     "question"                  => "\u{2753}"
