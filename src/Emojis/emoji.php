@@ -13,6 +13,19 @@ return [
     |
     */
 
+    "birthday"                  => "\u{1F382}",
+    "running"                   => "\u{1F3C3}",
+    "house"                     => "\u{1F3E0}",
+    "office"                    => "\u{1F3E2}",
+    "shit"                      => "\u{1F4A9}",
+    "computer"                  => "\u{1F4BB}",
+    "moneybag"                  => "\u{1F4B0}",
+    "camera"                    => "\u{1F4F7}",
+    "thumbsup"                  => "\u{1F44D}",
+    "thumbsdown"                => "\u{1F44E}",
+    "family"                    => "\u{1F46A}",
+    "kiss"                      => "\u{1F48B}",
+    "gun"                       => "\u{1F52B}",
     "grinning"                  => "\u{1F600}",
     "grin"                      => "\u{1F601}",
     "joy"                       => "\u{1F602}",
@@ -63,5 +76,12 @@ return [
     "raised_hands"              => "\u{1F64C}",
     "person_frowning"           => "\u{1F64D}",
     "pray"                      => "\u{1F64F}",
-    "relaxed"                   => "\u{263A}"
+    "worried"                   => "\u{1F61F}",
+    "cry"                       => "\u{1F622}",
+    "scream"                    => "\u{1F631}",
+    "raised_hands"              => "\u{1F64C}",
+    "pray"                      => "\u{1F64F}",
+    "relaxed"                   => "\u{263A}",
+    "white_check_mark"          => "\u{2705}",
+    "question"                  => "\u{2753}"
 ];
